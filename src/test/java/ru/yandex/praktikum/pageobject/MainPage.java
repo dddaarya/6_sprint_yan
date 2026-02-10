@@ -32,4 +32,9 @@ public class MainPage {
     public void clickBottomOrderButton() {
         driver.findElement(bottomOrderButton).click();
     }
+
+    public void scrollToBottomOrderButton() {
+        WebElement element = driver.findElement(bottomOrderButton);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+    }
 }
